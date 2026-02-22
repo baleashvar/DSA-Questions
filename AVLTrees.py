@@ -87,16 +87,15 @@ def postorder(root):
         print(root.data, end=" ")
 
 def level_order(root):
-    if not root:
-        return
-    queue = [root]
-    while queue:
-        current = queue.pop(0)
-        print(current.data, end=" ")
-        if current.left:
-            queue.append(current.left)
-        if current.right:
-            queue.append(current.right)
+    if root:
+        queue = [root]
+        while queue:
+            current = queue.pop(0)
+            print(current.data, end=" ")
+            if current.left:
+                queue.append(current.left)
+            if current.right:
+                queue.append(current.right)
 
             
 tree = AVLNode(10)
